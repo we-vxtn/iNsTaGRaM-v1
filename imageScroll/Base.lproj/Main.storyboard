@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="imageScroll" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="cbu-Bz-NIV">
+                                <rect key="frame" x="15" y="35" width="345" height="617"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iNsTAgRaM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmY-Yj-Xed">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f25-Fv-bBC">
+                                        <rect key="frame" x="0.0" y="40" width="345" height="537"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="THS-Xs-Xxf">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="537"/>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="THS-Xs-Xxf" firstAttribute="width" secondItem="f25-Fv-bBC" secondAttribute="width" id="RKJ-kL-aCO"/>
+                                            <constraint firstItem="THS-Xs-Xxf" firstAttribute="leading" secondItem="f25-Fv-bBC" secondAttribute="leading" id="art-Yp-8Cw"/>
+                                            <constraint firstItem="THS-Xs-Xxf" firstAttribute="top" secondItem="f25-Fv-bBC" secondAttribute="top" priority="999" constant="10" id="cQv-ym-b6g"/>
+                                            <constraint firstAttribute="trailing" secondItem="THS-Xs-Xxf" secondAttribute="trailing" id="pAV-jk-B3Y"/>
+                                            <constraint firstAttribute="bottom" secondItem="THS-Xs-Xxf" secondAttribute="bottom" priority="999" constant="10" id="poA-Zf-jtf"/>
+                                        </constraints>
+                                    </scrollView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="MNg-wx-U3i" userLabel="bottomRow">
+                                        <rect key="frame" x="0.0" y="577" width="345" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XNS-CO-GXK">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="40"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Add Text Field">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addTextField:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wLu-E4-Cdx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kaf-EJ-vsC">
+                                                <rect key="frame" x="177.5" y="0.0" width="167.5" height="40"/>
+                                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Add Image">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XCo-V1-q0J"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="JZr-Ir-ZR2"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="f25-Fv-bBC" secondAttribute="trailing" id="0Iw-tU-M7l"/>
+                                    <constraint firstItem="f25-Fv-bBC" firstAttribute="leading" secondItem="cbu-Bz-NIV" secondAttribute="leading" id="3n1-kx-yQW"/>
+                                    <constraint firstItem="f25-Fv-bBC" firstAttribute="top" secondItem="cmY-Yj-Xed" secondAttribute="bottom" id="64E-jY-UJP"/>
+                                    <constraint firstItem="MNg-wx-U3i" firstAttribute="top" secondItem="f25-Fv-bBC" secondAttribute="bottom" id="Wpp-jn-QX0"/>
+                                    <constraint firstItem="cmY-Yj-Xed" firstAttribute="height" secondItem="MNg-wx-U3i" secondAttribute="height" priority="999" id="YOI-IY-vZS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cbu-Bz-NIV" secondAttribute="trailing" constant="15" id="4Pu-Qd-4wH"/>
+                            <constraint firstItem="cbu-Bz-NIV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="U31-oX-nRN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cbu-Bz-NIV" secondAttribute="bottom" constant="15" id="XmV-EK-CRK"/>
+                            <constraint firstItem="cbu-Bz-NIV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="pwk-DG-j0V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="f25-Fv-bBC" id="xpK-ar-DGv"/>
+                        <outlet property="stackView" destination="THS-Xs-Xxf" id="lm3-JM-wBs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
